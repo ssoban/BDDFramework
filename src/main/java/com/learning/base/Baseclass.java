@@ -42,7 +42,7 @@ public class Baseclass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        String baseurl = "https://healthcaresuccess.com/";
+        String baseurl = "https://jqueryui.com/";
         driver.get(baseurl);
     }
 

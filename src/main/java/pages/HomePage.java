@@ -20,25 +20,31 @@ public class HomePage extends Baseclass {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[text()='About']")
-    private WebElement about;
+    @FindBy(xpath = "//a[contains(text(),'Droppable']")
+    private WebElement droppable;
 
     @FindBy(xpath = "//*[text()='Testimonials']")
-    private WebElement testimonials;
+    private WebElement drag;
 
+    @FindBy(xpath = "//*[text()='Testimonials']")
+    private WebElement drop;
 
     @FindBy(xpath = "//*[@class=\"oxygen-unslider-container unslider-horizontal\"]/ul/li/div/div[2]/div[1]")
     private List<WebElement> cleintName;
  public void verifyUrl(){
 
-     Assert.assertEquals(driver.getCurrentUrl(),"https://healthcaresuccess.com/");
+     Assert.assertEquals(driver.getCurrentUrl(),"https://jqueryui.com/");
  }
-    public void clickonAboutus() throws InterruptedException {
-     Thread.sleep(2000);
-//Creating object of an Actions class
+
+ public void clickOnDroppable(){
+     droppable.click();
+ }
+    public void performDragDrop() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.switchTo().frame("content");
         Actions action = new Actions(driver);
-//Performing the mouse hover action on the target element.
-        action.moveToElement(about).build().perform();
+        action.dragAndDrop(drag,drop).build().perform();
+
 
     }
 
