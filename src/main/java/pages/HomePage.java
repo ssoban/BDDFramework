@@ -49,8 +49,8 @@ public class HomePage extends Baseclass {
     }
 
      public void clickOnTestimonals(){
-         Assert.assertTrue(testimonials.isDisplayed(),"Share confirmation option is not present");
-         testimonials.click();
+         Assert.assertTrue(drag.isDisplayed(),"Share confirmation option is not present");
+         drop.click();
      }
 
 

@@ -31,7 +31,7 @@ log.info("Redirection done");
 
     @Given("^User click on About us$")
     public void user_click_on_About_us() throws InterruptedException {
-        omePage.clickonAboutus();
+        //omePage.clickonAboutus();
         log.info("click on About done");
     }
     @And("^Verify click on testimonial$")
