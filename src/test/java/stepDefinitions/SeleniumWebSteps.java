@@ -8,13 +8,12 @@ import org.apache.log4j.Logger;
 import pages.HomePage;
 
 
-public class HomepageSteps extends Baseclass {
+public class SeleniumWebSteps extends Baseclass {
 
-    public static final Logger log = Logger.getLogger(HomepageSteps.class);
+    public static final Logger log = Logger.getLogger(SeleniumWebSteps.class);
     HomePage omePage = new HomePage(driver);
     @Given("^User redirects to the site.$")
     public void user_redirects_to_the_site() {
-
 log.info("Redirection done");
     }
     @Then("^Verify website title$")
@@ -26,7 +25,6 @@ log.info("Redirection done");
     public void verify_website_current_url() {
         omePage.verifyUrl();
         log.info("Url is verified");
-
     }
 
     @Given("^User click on About us$")

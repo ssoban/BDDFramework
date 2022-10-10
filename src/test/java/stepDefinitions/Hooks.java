@@ -22,10 +22,22 @@ public class Hooks {
     public static WebDriver driver;
 
 
-    @Before(order=1)
-    public void initializeTest() {
+    @Before("@selenium")
+    public void initializeSeleniumTest() {
         System.out.println("Start the browser and Clear the cookies");
         launchbrowser();
+    }
+
+    @Before("@appium")
+    public void initializeAppiumTest() {
+        System.out.println("Start the browser and Clear the cookies");
+
+    }
+
+    @Before("@rest")
+    public void initializeRestTest() {
+        System.out.println("Start the test and Clear the cookies");
+
     }
 
     @Before(order=0)
@@ -39,7 +51,7 @@ public class Hooks {
         System.out.println("-----------------End of Scenario-----------------");
     }
 
-    @After(order=1)
+    @After("@selenium")
     public void afterScenario(Scenario scenario) {
         System.out.println("Log out the user and close the browser");
         if (scenario.isFailed()) {
@@ -51,6 +63,24 @@ public class Hooks {
         }
         closeBrowser();
     }
+
+    @After("@appium")
+    public void closeapp(Scenario scenario) {
+        System.out.println("Log out the user and close the browser");
+        if (scenario.isFailed()) {
+
+            String screenshotName = scenario.getName().replaceAll(" ", "_");
+
+            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", screenshotName);
+        }
+        closeBrowser();
+    }
+
+
+
+
+
 
 
 
