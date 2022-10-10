@@ -26,10 +26,10 @@ public class Base_setup_Appium {
         System.out.println("Inside initDriver method");
 
         cap.setCapability("platformName", "Android");
-        cap.setCapability("deviceName", "POCO F1");
+        cap.setCapability("deviceName", "Xiaomi 12T Pro");
         cap.setCapability("NEW_COMMAND_TIMEOUT", "4000");
-        cap.setCapability("appPackage", "");
-        cap.setCapability("appActivity","");
+        cap.setCapability("appPackage", "io.selendroid.testapp");
+        cap.setCapability("appActivity","io.selendroid.testapp.HomeScreenActivity");
         cap.setCapability("autoGrantPermissions", true);
         cap.setCapability("noReset", true);
         cap.setCapability(MobileCapabilityType.ACCEPT_INSECURE_CERTS,true);
