@@ -6,8 +6,8 @@ import io.cucumber.java.en.Then;
 import org.apache.log4j.Logger;
 import pages.RestAPICalls;
 
-public class ResrAssuredSteps {
-    public static final Logger log = Logger.getLogger(ResrAssuredSteps.class);
+public class RestAssuredSteps {
+    public static final Logger log = Logger.getLogger(RestAssuredSteps.class);
     RestAPICalls restAPICalls = new RestAPICalls();
 
     @Given("^Verify if the status code is 200")
