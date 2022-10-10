@@ -1,3 +1,9 @@
-2022-10-10 13:29:28,193  INFO [main] SeleniumWebSteps:17 - Redirection done
- 2022-10-10 13:29:28,197  INFO [main] SeleniumWebSteps:22 - Redirection was successful
+2022-10-11 03:16:30,603  INFO [main] HomePage:84 - PASS: Source is dropped to target as expected
+ 2022-10-11 03:16:38,835  INFO [main] HomePage:104 - Item 1
+ 2022-10-11 03:16:38,857  INFO [main] HomePage:104 - Item 2
+ 2022-10-11 03:16:38,877  INFO [main] HomePage:104 - Item 3
+ 2022-10-11 03:16:38,895  INFO [main] HomePage:104 - Item 4
+ 2022-10-11 03:16:38,913  INFO [main] HomePage:104 - Item 5
+ 2022-10-11 03:16:38,931  INFO [main] HomePage:104 - Item 6
+ 2022-10-11 03:16:38,950  INFO [main] HomePage:104 - Item 7
  

@@ -11,7 +11,7 @@ import pages.HomePage;
 public class SeleniumWebSteps extends Baseclass {
 
     public static final Logger log = Logger.getLogger(SeleniumWebSteps.class);
-    HomePage omePage = new HomePage(driver);
+    HomePage homePage = new HomePage(driver);
     @Given("^User redirects to the site.$")
     public void user_redirects_to_the_site() {
     log.info("Redirection done");
@@ -23,16 +23,16 @@ public class SeleniumWebSteps extends Baseclass {
     }
     @And("^Verify website current url$")
     public void verify_website_current_url() {
-
+        homePage.verifyUrl();
         log.info("Url is verified");
     }
     @Given("^User click on Droppable option under interactions section$")
-    public void user_click_on_droppable_option_under_interactions_section() {
-
+    public void user_click_on_droppable_option_under_interactions_section() throws InterruptedException {
+        homePage.clickOnDroppable();
     }
     @Then("^User perform drag and drop function.$")
-    public void user_perform_drag_and_drop_function() {
-
+    public void user_perform_drag_and_drop_function() throws InterruptedException {
+     homePage.performDragDrop();
     }
     @Then("^Verify Drop here changed to Dropped.$")
     public void verify_drop_here_changed_to_dropped() {
@@ -40,16 +40,16 @@ public class SeleniumWebSteps extends Baseclass {
     }
 
     @Given("^User click on Selectable option under interactions section$")
-    public void user_click_on_selectable_option_under_interactions_section() {
-
+    public void user_click_on_selectable_option_under_interactions_section() throws InterruptedException {
+        homePage.clickOnSelectable();
     }
     @Then("^User click on item1,item3 and item7.$")
-    public void user_click_on_item1_item3_and_item7() {
-
+    public void user_click_on_item1_item3_and_item7() throws InterruptedException {
+     homePage.selectitems();
     }
     @Given("^User click on Controlgroup option under widgets section$")
-    public void user_click_on_controlgroup_option_under_widgets_section() {
-
+    public void user_click_on_controlgroup_option_under_widgets_section() throws InterruptedException {
+       homePage.clickOnControlGroup();
     }
     @Then("^User click Automatic and insurance radio button.$")
     public void user_click_automatic_and_insurance_radio_button() {

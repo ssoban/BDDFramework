@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 10, 2022 01:29:23 PM</span></a>
+<a href="#"><span class="badge badge-primary">Oct 11, 2022 03:16:20 AM</span></a>
 </li>
 </ul>
 </div>
@@ -57,11 +57,6 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -71,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 10, 2022 01:29:23 PM</h3>
+<h3>Oct 11, 2022 03:16:20 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 10, 2022 01:29:42 PM</h3>
+<h3>Oct 11, 2022 03:16:48 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -89,7 +84,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -105,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
+<div><small data-tooltip='100%'>
 <b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -128,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='93%'><b>15</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='6%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -148,9 +143,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='98%'><b>54</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>9</b> steps passed</small></div>
 <div>
-<small data-tooltip='1%'><b>1</b> steps failed,
+<small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -167,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify Regres.in functionality":3.534,"Verify jquery selenium functionality":14.087
+"Verify jquery selenium functionality":27.045
 };
 </script>
 <div class="row">
@@ -177,32 +172,8 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@Background:</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>50%</td>
-</tr>
-<tr>
-<td>@appium</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>@selenium</td>
 <td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@rest</td>
-<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -218,18 +189,18 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 1,
-failParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 15,
-failChild: 1,
+passChild: 3,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 54,
-failGrandChild: 1,
+passGrandChild: 9,
+failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
@@ -246,7 +217,6 @@ eventsCount: 5,
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -254,7 +224,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Background:</a><a class="dropdown-item" href="#">@appium</a><a class="dropdown-item" href="#">@selenium</a><a class="dropdown-item" href="#">@rest</a>
+<a class="dropdown-item" href="#">@selenium</a>
 </ul>
 </li>
 </ul>
@@ -265,9 +235,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify Regres.in  functionality</p>
+            <p class="name">Verify jquery selenium functionality</p>
             <p class="text-sm">
-              <span>1:29:24 PM</span> / <span>00:00:03:534</span>
+              <span>3:16:21 AM</span> / <span>00:00:27:045</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -275,10 +245,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify Regres.in functionality</h5>
-<span class='badge badge-success'>10.10.2022 1:29:24 PM</span>
-<span class='badge badge-danger'>10.10.2022 1:29:27 PM</span>
-<span class='badge badge-default'>00:00:03:534</span>
+<h5 class="test-status text-pass">Verify jquery selenium functionality</h5>
+<span class='badge badge-success'>10.11.2022 3:16:21 AM</span>
+<span class='badge badge-danger'>10.11.2022 3:16:48 AM</span>
+<span class='badge badge-default'>00:00:27:045</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -290,416 +260,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify Get API functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verify_if_the_status_code_is200()">
-                <span>Given Verify if the status code is 200</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verify_the_value_of_first_name_for_is_byron()">
-                <span>Then Verify the value of first_name for "id": 10 is ‘Byron’</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verification_successful()">
-                <span>And Verification Successful</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify Post API functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verify_if_the_status_code_is_201()">
-                <span>Given Verify if the status code is 201</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verify_if_the_id_is_generated()">
-                <span>Then Verify if the id is generated</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.RestAssuredSteps.verify_the_response_json_scheme()">
-                <span>And Verify the response json scheme</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="16"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify jquery selenium functionality</p>
-            <p class="text-sm">
-              <span>1:29:27 PM</span> / <span>00:00:14:087</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Verify jquery selenium functionality</h5>
-<span class='badge badge-success'>10.10.2022 1:29:27 PM</span>
-<span class='badge badge-danger'>10.10.2022 1:29:42 PM</span>
-<span class='badge badge-default'>00:00:14:087</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify user launch application</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.User_successfully_able_to_launch_ppplication()">
-                <span>Given User successfully able to launch application</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>Verify the elements on screen</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_title()">
-                <span>Given verify the title</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_screen()">
-                <span>And verify the elements on the screen</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Verify Homepage functionality</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnENBuWon()">
-                <span>Given tap on [EN BuWon]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.selectOptionNoNo()">
-                <span>And select option [No, no]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_homepage_is_displayed()">
-                <span>Then Check if the homepage is displayed</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Verify Prefered car functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_chrome_logo_bu_won()">
-                <span>Given Tap on Chrome logo buWon</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTitle()">
-                <span>Then Verify the title</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextHelloCanYou()">
-                <span>And Verify the text [Hello, can you...., ]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.enter_your_name_in_the_text_box()">
-                <span>And Enter your name in the text box</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.select_prefered_car_as()">
-                <span>And Select Prefered Car as Mercedes</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnSendMeYourName()">
-                <span>And Tap on [Send me your name!]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextThisIsMy()">
-                <span>And Verify the text [This is my....]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_your_name_and_prefered_car_selected_from_the_previous_screen()">
-                <span>And Verify your name and prefered car selected from the previous screen.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.clickOnLinkHereAtTheBoWomAndCheckIfTheDefaultPreferedCarSelectedIsVolvo()">
-                <span>And Click on link<here> at the boWom and check if the default Prefered Car selected is Volvo</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Verify  user  landed on registration Screen .</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_file_logo_bu_won()">
-                <span>Given Tap on File logo buWon</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTitle()">
-                <span>And Verify the title</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextWelcomeToRegister()">
-                <span>And Verify the text [Welcome to register... ]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_Register_screen()">
-                <span>And Verify the elements on the Register screen</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_name_field_is_pre_populated_with()">
-                <span>And Check if the Name field is pre-populated with Mr. Burns</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_is_selected_as_programming_language_by_default_fill_in_the_fields_with_new_values()">
-                <span>And Check if Ruby is selected as Programming Language by default Fill in the fields with new values</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.select()">
-                <span>And Select I accept adds</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_register_user_verify()">
-                <span>And Tap on Register User</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_user_details_on_the_next_screen()">
-                <span>And Verify the user details on the next screen</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnRegisterUser()">
-                <span>And Tap on [Register User]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_screen_navigates_to_the_home_screen()">
-                <span>And Check if the screen navigates to the home screen.</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>Verify User Registration  Screen elements.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnShowProgressBarForAWhile()">
-                <span>Given Tap on [Show Progress Bar for a while]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.wait_for_the_loader_to_disappear()">
-                <span>Then Wait for the loader to disappear</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_user_registration_screen()">
-                <span>And Verify the elements on the user registration screen</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>Verify Toast message.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDisplaysAToast()">
-                <span>Given Tap on [Displays a Toast]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_toast_text()">
-                <span>And Verify the toast text</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="81"><span class="badge log pass-bg mr-2">Pass</span>Verify Popup dismiss functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDisplayPopupWindow()">
-                <span>Given Tap on [Display Popup Window]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDismiss()">
-                <span>And Tap on [Dismiss]</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="88"><span class="badge log pass-bg mr-2">Pass</span>Verify Press to throw unhandled exception functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnPressToThrowUnhandledExcepOn()">
-                <span>Given Tap on [Press to throw unhandled excep.on]</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_home_screen_title()">
-                <span>And Verify home screen title</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Verify unhandled exception by entering values functionality.</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.type_in_type_to_throw_unhandled_exception()">
-                <span>Given Type test in Type to throw unhandled exception.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_home_screen_title()">
-                <span>And Verify home screen title</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="102"><span class="badge log fail-bg mr-2">Fail</span>Verify user is on Website</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_redirects_to_the_site()">
-                <span>Given User redirects to the site.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verify_website_title()">
-                <span>Then Verify website title</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="stepDefinitions.SeleniumWebSteps.verify_website_current_url()">
-                <span>And Verify website current url</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException
-	at pages.HomePage.verifyUrl(HomePage.java:36)
-	at stepDefinitions.SeleniumWebSteps.verify_website_current_url(SeleniumWebSteps.java:26)
-	at ✽.Verify website current url(file:///Users/syedsoban/Documents/BDDFramework/src/test/java/features/SeleniumWeb.feature:7)
-</textarea>
-      
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="108"><span class="badge log pass-bg mr-2">Pass</span>Verify Droppable functionality.</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify Droppable functionality.</div>
       </div>
     </div>
         <div class="collapse">
@@ -725,7 +286,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="116"><span class="badge log pass-bg mr-2">Pass</span>Verify Selectable functionality.</div>
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Verify Selectable functionality.</div>
       </div>
     </div>
         <div class="collapse">
@@ -746,7 +307,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>Verify Control Group Functionality.</div>
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify Control Group Functionality.</div>
       </div>
     </div>
         <div class="collapse">
@@ -790,174 +351,10 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@Background:</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Background:</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:27 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='17'>Verify user launch application</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify user launch application</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='102'>Verify user is on Website</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify user is on Website</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>9</span>
-</span>
-<p class="name">@appium</p>
-<p class="duration text-sm">9 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@appium</h4>
-<span status="pass" class='badge log pass-bg'>9 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:27 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='21'>Verify the elements on screen</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify the elements on screen</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='28'>Verify Homepage functionality</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Homepage functionality</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='36'>Verify Prefered car functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Prefered car functionality.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='50'>Verify user landed on registration Screen .</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify user landed on registration Screen .</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='66'>Verify User Registration Screen elements.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify User Registration Screen elements.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='74'>Verify Toast message.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Toast message.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='81'>Verify Popup dismiss functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Popup dismiss functionality.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='88'>Verify Press to throw unhandled exception functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Press to throw unhandled exception functionality.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='95'>Verify unhandled exception by entering values functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify unhandled exception by entering values functionality.</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
@@ -982,9 +379,9 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:28 PM</td>
+<td>03:16:21 AM</td>
 <td>
-<a href="#" class="linked" test-id='16' id='108'>Verify Droppable functionality.</a>
+<a href="#" class="linked" test-id='1' id='2'>Verify Droppable functionality.</a>
 <div class="">
 <span class="badge badge-default">Verify jquery selenium functionality.Verify Droppable functionality.</span>
 </div>
@@ -992,9 +389,9 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:34 PM</td>
+<td>03:16:30 AM</td>
 <td>
-<a href="#" class="linked" test-id='16' id='116'>Verify Selectable functionality.</a>
+<a href="#" class="linked" test-id='1' id='10'>Verify Selectable functionality.</a>
 <div class="">
 <span class="badge badge-default">Verify jquery selenium functionality.Verify Selectable functionality.</span>
 </div>
@@ -1002,109 +399,11 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:38 PM</td>
+<td>03:16:39 AM</td>
 <td>
-<a href="#" class="linked" test-id='16' id='123'>Verify Control Group Functionality.</a>
+<a href="#" class="linked" test-id='1' id='17'>Verify Control Group Functionality.</a>
 <div class="">
 <span class="badge badge-default">Verify jquery selenium functionality.Verify Control Group Functionality.</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>2</span>
-</span>
-<p class="name">@rest</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@rest</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:24 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>Verify Get API functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify Regres.in functionality.Verify Get API functionality.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:29:26 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='9'>Verify Post API functionality.</a>
-<div class="">
-<span class="badge badge-default">Verify Regres.in functionality.Verify Post API functionality.</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.NullPointerException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.NullPointerException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>13:29:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='16' id='106'>And Verify website current url</a>
-<div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify user is on Website.And Verify website current url</span>
 </div>
 </td>
 </tr>
