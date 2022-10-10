@@ -16,7 +16,7 @@ public class HomePage extends Baseclass {
 
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        Baseclass.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

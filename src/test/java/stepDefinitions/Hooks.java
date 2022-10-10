@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 
+import com.learning.base.Base_setup_Appium;
 import configuration.ReadConfigFile;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -20,7 +21,7 @@ import static com.learning.base.Baseclass.launchbrowser;
 
 public class Hooks {
     public static WebDriver driver;
-
+    Base_setup_Appium appium = new Base_setup_Appium();
 
     @Before("@selenium")
     public void initializeSeleniumTest() {
@@ -29,8 +30,9 @@ public class Hooks {
     }
 
     @Before("@appium")
-    public void initializeAppiumTest() {
+    public void initializeAppiumTest() throws InterruptedException {
         System.out.println("Start the browser and Clear the cookies");
+        appium.initDriver();
 
     }
 
@@ -74,6 +76,7 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", screenshotName);
         }
+        appium.tearDown();
     }
 
 
