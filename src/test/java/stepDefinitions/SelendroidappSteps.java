@@ -1,10 +1,15 @@
 package stepDefinitions;
 
+import com.learning.base.Base_setup_Appium;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import pages.AppiumHomePage;
 
-public class SelendroidappSteps {
+public class SelendroidappSteps  extends Base_setup_Appium {
+
+    AppiumHomePage appiumHomePage = new AppiumHomePage(appDriver);
+
 
     @Given("^User successfully able to launch application$")
     public void User_successfully_able_to_launch_ppplication() {
@@ -13,19 +18,20 @@ public class SelendroidappSteps {
 
     @Given("^verify the title$")
     public void verify_the_title() {
-
+        appiumHomePage.verifyTitle();
     }
     @And("^verify the elements on the screen$")
     public void verify_the_elements_on_the_screen() {
-
+     appiumHomePage.verifyElementsOnScreen();
     }
 
     @Given("^tap on [EN BuWon]$")
     public void tap_on_en_bu_won() {
-
+     appiumHomePage.clickOnEnButton();
     }
     @And("select option [No, no]")
     public void selectOptionNoNo() {
+
     }
     @Then("^Check if the homepage is displayed$")
     public void check_if_the_homepage_is_displayed() {
@@ -34,12 +40,12 @@ public class SelendroidappSteps {
 
     @Given("^Tap on Chrome logo buWon$")
     public void tap_on_chrome_logo_bu_won() {
-
+        appiumHomePage.ClickOnChrome();
     }
 
     @Then("^Verify the text [Hello, can you...., ]$")
     public void verify_the_text_hello_can_you() {
-
+        appiumHomePage.verifyChromeScreen();
     }
     @Then("^Enter your name in the text box$")
     public void enter_your_name_in_the_text_box() {
@@ -67,12 +73,12 @@ public class SelendroidappSteps {
     }
     @Given("^Tap on File logo buWon$")
     public void tap_on_file_logo_bu_won() {
-
+        appiumHomePage.clickOnFile();
     }
 
     @And("^Verify the text [Welcome to register... ]$")
     public void verify_the_text_welcome_to_register() {
-
+        appiumHomePage.registerNewUSer();
     }
     @And("^Verify the elements on the Register screen$")
     public void verify_the_elements_on_the_Register_screen() {
@@ -96,7 +102,7 @@ public class SelendroidappSteps {
     }
     @And("^Verify the user details on the next screen$")
     public void verify_the_user_details_on_the_next_screen() {
-
+        appiumHomePage.verifyNeRegisterDetails();
     }
     @And("^Tap on [Register User]$")
     public void tap_on_register_user() {
@@ -110,7 +116,7 @@ public class SelendroidappSteps {
 
     @Given("^Tap on [Show Progress Bar for a while]$")
     public void tap_on_show_progress_bar_for_a_while() {
-
+        appiumHomePage.clickOnProgressBar();
     }
     @Then("^Wait for the loader to disappear$")
     public void wait_for_the_loader_to_disappear() {
@@ -123,6 +129,7 @@ public class SelendroidappSteps {
 
     @Given("^Tap on [Displays a Toast]$")
     public void tap_on_displays_a_toast() {
+        appiumHomePage.clickOnDisplayToast();
 
     }
     @Given("^Verify the toast text$")
@@ -132,7 +139,7 @@ public class SelendroidappSteps {
 
     @Given("^Tap on [Display Popup Window]$")
     public void tap_on_display_popup_window() {
-
+        appiumHomePage.clickOnPopupWindow();
     }
     @Given("^Tap on [Dismiss]$")
     public void tap_on_dismiss() {
@@ -141,7 +148,7 @@ public class SelendroidappSteps {
 
     @Given("^Tap on [Press to throw unhandled excep.on]$")
     public void tap_on_press_to_throw_unhandled_excep_on() {
-
+        appiumHomePage.pressToThrowUnhandledException();
     }
     @Given("^Verify home screen title$")
     public void verify_home_screen_title() {
@@ -150,7 +157,7 @@ public class SelendroidappSteps {
 
     @Given("^Type test in Type to throw unhandled exception.$")
     public void type_in_type_to_throw_unhandled_exception() {
-
+        appiumHomePage.typeToThrowUnhandledException();
     }
 
 
