@@ -2,9 +2,14 @@ package com.learning.base;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -50,7 +55,18 @@ public class Base_setup_Appium {
         System.out.println("Driver in initdriver is : "+appDriver);
     }
 
-
+    public void waitUntilVisible(MobileElement element, int timeOutInSec) {
+        try {
+            FluentWait<AppiumDriver> fWait = new FluentWait<AppiumDriver>(appDriver)
+                    .withTimeout(Duration.ofSeconds(timeOutInSec))
+                    .pollingEvery(Duration.ofMillis(50))
+                    .ignoring(NoSuchElementException.class)
+                    .ignoring(StaleElementReferenceException.class);
+            fWait.until(ExpectedConditions.visibilityOf(element));
+        } catch (Exception e) {
+            throw new RuntimeException("element is either not displayed or enabled");
+        }
+    }
 
     public void tearDown(){
         appDriver.quit();

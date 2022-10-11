@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Oct 11, 2022 03:16:20 AM</span></a>
+<a href="#"><span class="badge badge-primary">Oct 11, 2022 06:32:11 AM</span></a>
 </li>
 </ul>
 </div>
@@ -57,6 +57,11 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Oct 11, 2022 03:16:20 AM</h3>
+<h3>Oct 11, 2022 06:32:11 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Oct 11, 2022 03:16:48 AM</h3>
+<h3>Oct 11, 2022 06:35:04 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='66%'><b>6</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='33%'><b>3</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>9</b> steps passed</small></div>
+<div><small data-tooltip='74%'><b>29</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='15%'><b>6</b> steps failed,
+<b>4</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify jquery selenium functionality":27.045
+"Verify jquery selenium functionality":173.15
 };
 </script>
 <div class="row">
@@ -172,12 +177,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@selenium</td>
+<td>@appium</td>
+<td>6</td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>66.667%</td>
 </tr>
 </tbody>
 </table></div>
@@ -188,21 +193,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 6,
+failChild: 3,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 9,
-failGrandChild: 0,
+passGrandChild: 29,
+failGrandChild: 6,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 4,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -216,7 +221,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -224,31 +229,31 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@selenium</a>
+<a class="dropdown-item" href="#">@appium</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Verify jquery selenium functionality</p>
             <p class="text-sm">
-              <span>3:16:21 AM</span> / <span>00:00:27:045</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:32:11 AM</span> / <span>00:02:53:150</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify jquery selenium functionality</h5>
-<span class='badge badge-success'>10.11.2022 3:16:21 AM</span>
-<span class='badge badge-danger'>10.11.2022 3:16:48 AM</span>
-<span class='badge badge-default'>00:00:27:045</span>
+<h5 class="test-status text-fail">Verify jquery selenium functionality</h5>
+<span class='badge badge-success'>10.11.2022 6:32:11 AM</span>
+<span class='badge badge-danger'>10.11.2022 6:35:04 AM</span>
+<span class='badge badge-default'>00:02:53:150</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -260,23 +265,143 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify Droppable functionality.</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify the elements on screen</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="stepDefinitions.SelendroidappSteps.verify_the_title()">
+                <span>Given verify the title</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: title})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+	at pages.AppiumHomePage.verifyTitle(AppiumHomePage.java:145)
+	at stepDefinitions.SelendroidappSteps.verify_the_title(SelendroidappSteps.java:21)
+	at ✽.verify the title(file:///Users/syedsoban/Documents/BDDFramework/src/test/java/features/SelendroidMobileTestApp.feature:9)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@20921b9b (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+	at pages.AppiumHomePage.verifyTitle(AppiumHomePage.java:145)
+	at stepDefinitions.SelendroidappSteps.verify_the_title(SelendroidappSteps.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:110)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:110)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:136)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:145)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: title})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'XEADMINs-MacBook-Pro.local', ip: '2001:8f8:1a3d:f026:657d:22aa:60e6:3902%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_202'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 58 more
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_screen()">
+                <span>And verify the elements on the screen</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.Hooks.closeapp(Hooks.java:76)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify Homepage functionality</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_click_on_droppable_option_under_interactions_section()">
-                <span>Given User click on Droppable option under interactions section</span>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnENBuWon()">
+                <span>Given tap on [EN BuWon]</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_perform_drag_and_drop_function()">
-                <span>Then User perform drag and drop function.</span>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.selectOptionNoNo()">
+                <span>And select option [No, no]</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verify_drop_here_changed_to_dropped()">
-                <span>And Verify Drop here changed to Dropped.</span>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_homepage_is_displayed()">
+                <span>Then Check if the homepage is displayed</span>
       <div>
       </div>
               </div>
@@ -286,18 +411,53 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Verify Selectable functionality.</div>
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify Prefered car functionality.</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_click_on_selectable_option_under_interactions_section()">
-                <span>Given User click on Selectable option under interactions section</span>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_chrome_logo_bu_won()">
+                <span>Given Tap on Chrome logo buWon</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_click_on_item1_item3_and_item7()">
-                <span>Then User click on item1,item3 and item7.</span>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTitle()">
+                <span>Then Verify the title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextHelloCanYou()">
+                <span>And Verify the text [Hello, can you...., ]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.enter_your_name_in_the_text_box()">
+                <span>And Enter your name in the text box</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.select_prefered_car_as()">
+                <span>And Select Prefered Car as Mercedes</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnSendMeYourName()">
+                <span>And Tap on [Send me your name!]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextThisIsMy()">
+                <span>And Verify the text [This is my....]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_your_name_and_prefered_car_selected_from_the_previous_screen()">
+                <span>And Verify your name and prefered car selected from the previous screen.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.clickOnLinkHereAtTheBoWomAndCheckIfTheDefaultPreferedCarSelectedIsVolvo()">
+                <span>And Click on link<here> at the boWom and check if the default Prefered Car selected is Volvo</span>
       <div>
       </div>
               </div>
@@ -307,29 +467,318 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify Control Group Functionality.</div>
+        <div class="node" id="31"><span class="badge log fail-bg mr-2">Fail</span>Verify  user  landed on registration Screen .</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_file_logo_bu_won()">
+                <span>Given Tap on File logo buWon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTitle()">
+                <span>And Verify the title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verifyTheTextWelcomeToRegister()">
+                <span>And Verify the text [Welcome to register... ]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_Register_screen()">
+                <span>And Verify the elements on the Register screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_name_field_is_pre_populated_with()">
+                <span>And Check if the Name field is pre-populated with Mr. Burns</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.check_if_is_selected_as_programming_language_by_default_fill_in_the_fields_with_new_values()">
+                <span>And Check if Ruby is selected as Programming Language by default Fill in the fields with new values</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.select()">
+                <span>And Select I accept adds</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.tap_on_register_user_verify()">
+                <span>And Tap on Register User</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.SelendroidappSteps.verify_the_user_details_on_the_next_screen()">
+                <span>And Verify the user details on the next screen</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: label_username_data})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(<generated>)
+	at pages.AppiumHomePage.verifyNeRegisterDetails(AppiumHomePage.java:224)
+	at stepDefinitions.SelendroidappSteps.verify_the_user_details_on_the_next_screen(SelendroidappSteps.java:105)
+	at ✽.Verify the user details on the next screen(file:///Users/syedsoban/Documents/BDDFramework/src/test/java/features/SelendroidMobileTestApp.feature:41)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1bc425e7 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.getText(<generated>)
+	at pages.AppiumHomePage.verifyNeRegisterDetails(AppiumHomePage.java:224)
+	at stepDefinitions.SelendroidappSteps.verify_the_user_details_on_the_next_screen(SelendroidappSteps.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:110)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:110)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:136)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:145)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: label_username_data})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'XEADMINs-MacBook-Pro.local', ip: '2001:8f8:1a3d:f026:657d:22aa:60e6:3902%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_202'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 58 more
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.SeleniumWebSteps.tapOnRegisterUser()">
+                <span>And Tap on [Register User]</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.SelendroidappSteps.check_if_the_screen_navigates_to_the_home_screen()">
+                <span>And Check if the screen navigates to the home screen.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.Hooks.closeapp(Hooks.java:76)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Verify User Registration  Screen elements.</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_click_on_controlgroup_option_under_widgets_section()">
-                <span>Given User click on Controlgroup option under widgets section</span>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnShowProgressBarForAWhile()">
+                <span>Given Tap on [Show Progress Bar for a while]</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.user_click_automatic_and_insurance_radio_button()">
-                <span>Then User click Automatic and insurance radio button.</span>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.wait_for_the_loader_to_disappear()">
+                <span>Then Wait for the loader to disappear</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verify_click_on_standard_and_insurance_radio_button()">
-                <span>And Verify click on standard and Insurance radio button.</span>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_elements_on_the_user_registration_screen()">
+                <span>And Verify the elements on the user registration screen</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.verify_user_click_on_book_now()">
-                <span>And Verify user click on Book Now!</span>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>Verify Toast message.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDisplaysAToast()">
+                <span>Given Tap on [Displays a Toast]</span>
       <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_the_toast_text()">
+                <span>And Verify the toast text</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>Verify Popup dismiss functionality.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDisplayPopupWindow()">
+                <span>Given Tap on [Display Popup Window]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnDismiss()">
+                <span>And Tap on [Dismiss]</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="69"><span class="badge log pass-bg mr-2">Pass</span>Verify Press to throw unhandled exception functionality.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.SeleniumWebSteps.tapOnPressToThrowUnhandledExcepOn()">
+                <span>Given Tap on [Press to throw unhandled excep.on]</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SelendroidappSteps.verify_home_screen_title()">
+                <span>And Verify home screen title</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log fail-bg mr-2">Fail</span>Verify unhandled exception by entering values functionality.</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="stepDefinitions.SelendroidappSteps.type_in_type_to_throw_unhandled_exception()">
+                <span>Given Type test in Type to throw unhandled exception.</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.InvalidElementStateException: Cannot set the element to 'test'. Did you interact with the correct element?
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'XEADMINs-MacBook-Pro.local', ip: '2001:8f8:1a3d:f026:657d:22aa:60e6:3902%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {NEW_COMMAND_TIMEOUT: 4000, acceptInsecureCerts: true, appActivity: io.selendroid.testapp.HomeS..., appPackage: io.selendroid.testapp, autoGrantPermissions: true, databaseEnabled: false, desired: {NEW_COMMAND_TIMEOUT: 4000, acceptInsecureCerts: true, appActivity: io.selendroid.testapp.HomeS..., appPackage: io.selendroid.testapp, autoGrantPermissions: true, deviceName: Xiaomi 12T Pro, noReset: true, platformName: android, setWebContentsDebuggingEnabled: true}, deviceApiLevel: 31, deviceManufacturer: Xiaomi, deviceModel: 2107113SG, deviceName: 759cf6d1, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: 759cf6d1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 12, setWebContentsDebuggingEnabled: true, statBarHeight: 84, takesScreenshot: true, viewportRect: {height: 2102, left: 0, top: 84, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 941a6630-5cdc-4790-92ce-0e87ba08a9df
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:40)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.sendKeys(<generated>)
+	at pages.AppiumHomePage.typeToThrowUnhandledException(AppiumHomePage.java:255)
+	at stepDefinitions.SelendroidappSteps.type_in_type_to_throw_unhandled_exception(SelendroidappSteps.java:160)
+	at ✽.Type test in Type to throw unhandled exception.(file:///Users/syedsoban/Documents/BDDFramework/src/test/java/features/SelendroidMobileTestApp.feature:68)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.SelendroidappSteps.verify_home_screen_title()">
+                <span>And Verify home screen title</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.Hooks.closeapp(Hooks.java:76)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -358,15 +807,17 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>3</span>
+<span class='badge log pass-bg'>6</span>
+<span class='badge log badge-danger'>3</span>
 </span>
-<p class="name">@selenium</p>
-<p class="duration text-sm">3 tests</p>
+<p class="name">@appium</p>
+<p class="duration text-sm">9 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@selenium</h4>
-<span status="pass" class='badge log pass-bg'>3 passed</span>
+<h4>@appium</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -377,33 +828,247 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>03:16:21 AM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:32:11 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify Droppable functionality.</a>
+<a href="#" class="linked" test-id='1' id='2'>Verify the elements on screen</a>
 <div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Droppable functionality.</span>
+<span class="badge badge-default">Verify jquery selenium functionality.Verify the elements on screen</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>03:16:30 AM</td>
+<td>06:32:49 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='10'>Verify Selectable functionality.</a>
+<a href="#" class="linked" test-id='1' id='9'>Verify Homepage functionality</a>
 <div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Selectable functionality.</span>
+<span class="badge badge-default">Verify jquery selenium functionality.Verify Homepage functionality</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>03:16:39 AM</td>
+<td>06:33:04 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='17'>Verify Control Group Functionality.</a>
+<a href="#" class="linked" test-id='1' id='17'>Verify Prefered car functionality.</a>
 <div class="">
-<span class="badge badge-default">Verify jquery selenium functionality.Verify Control Group Functionality.</span>
+<span class="badge badge-default">Verify jquery selenium functionality.Verify Prefered car functionality.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:33:18 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Verify user landed on registration Screen .</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify user landed on registration Screen .</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:33:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify User Registration Screen elements.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify User Registration Screen elements.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:34:08 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Verify Toast message.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify Toast message.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:34:22 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>Verify Popup dismiss functionality.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify Popup dismiss functionality.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:34:36 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='69'>Verify Press to throw unhandled exception functionality.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify Press to throw unhandled exception functionality.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:34:50 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>Verify unhandled exception by entering values functionality.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify unhandled exception by entering values functionality.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:32:49 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='7'>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify the elements on screen.stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:33:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify user landed on registration Screen ..stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:35:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='81'>stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify unhandled exception by entering values functionality..stepDefinitions.Hooks.closeapp(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:32:28 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Given verify the title</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify the elements on screen.Given verify the title</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:33:32 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='42'>And Verify the user details on the next screen</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify user landed on registration Screen ..And Verify the user details on the next screen</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.InvalidElementStateException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.InvalidElementStateException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:35:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='79'>Given Type test in Type to throw unhandled exception.</a>
+<div class="">
+<span class="badge badge-default">Verify jquery selenium functionality.Verify unhandled exception by entering values functionality..Given Type test in Type to throw unhandled exception.</span>
 </div>
 </td>
 </tr>

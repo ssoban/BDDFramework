@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 public class AppiumHomePage extends Driver {
+    Base_setup_Appium common= new Base_setup_Appium();
 
 
     public AppiumHomePage(AppiumDriver<MobileElement> appDriver) {
@@ -142,11 +143,12 @@ public class AppiumHomePage extends Driver {
     public MobileElement dismiss;
 
     public void verifyTitle(){
+        common.waitUntilVisible(title,3);
         Assert.assertTrue(title.isDisplayed(),"Title is wrong");
     }
 
     public void verifyElementsOnScreen(){
-
+        common.waitUntilVisible(title,3);
         Assert.assertTrue(welcomeText.isDisplayed(),"Welcome Text is wrong");
         Assert.assertTrue(subtitleText.isDisplayed(),"Sub text is wrong");
         Assert.assertTrue(buttonTest.isDisplayed(),"button text is wrong");
@@ -164,6 +166,7 @@ public class AppiumHomePage extends Driver {
     }
 
     public void clickOnEnButton(){
+        common.waitUntilVisible(title,3);
         buttonTest.click();
         Assert.assertTrue(message.getText().contains("This will end the activity"),"element not displayed");
         Assert.assertTrue(button1.getText().contains("I agree"),"element not displayed");
@@ -173,11 +176,12 @@ public class AppiumHomePage extends Driver {
 
 
     public void  ClickOnChrome(){
+        common.waitUntilVisible(title,3);
         startWebview.click();
     }
 
     public void verifyChromeScreen() {
-
+        common.waitUntilVisible(title,3);
         Set<String> contextName = appDriver.getContextHandles();
         System.out.println(contextName);
         for (String contexts : contextName) {
@@ -194,7 +198,7 @@ public class AppiumHomePage extends Driver {
                 prefereedCar.click();
                 text2.click();
                 Send_me_your_name.click();
-
+                common.waitUntilVisible(title,3);
                 hereLink.click();
 
             }
@@ -203,11 +207,12 @@ public class AppiumHomePage extends Driver {
     }
 
     public void clickOnFile(){
+        common.waitUntilVisible(title,3);
         startUserRegistration.click();
     }
 
     public void registerNewUSer(){
-
+        common.waitUntilVisible(title,3);
         Assert.assertTrue(register_a_new_User.getText().contains("Welcome to register a new User"),"Selectable option not dispalyed");
         inputUsername.sendKeys("ssoban");
         inputEmail.sendKeys("xyz@gmail.com");
@@ -221,6 +226,7 @@ public class AppiumHomePage extends Driver {
     }
 
     public void verifyNeRegisterDetails(){
+        common.waitUntilVisible(title,3);
         Assert.assertTrue(label_username_data.getText().contains("ssoban"),"Selectable option not dispalyed");
         Assert.assertTrue(label_password_data.getText().contains("xyz@gmail.com\""),"Selectable option not dispalyed");
         Assert.assertTrue(label_email_data.getText().contains("1234"),"Selectable option not dispalyed");
@@ -231,6 +237,7 @@ public class AppiumHomePage extends Driver {
     }
 
     public void clickOnProgressBar(){
+        common.waitUntilVisible(title,3);
         waitingButtonTest.click();
         Assert.assertTrue(progress.isDisplayed(),"Selectable option not dispalyed");
         Assert.assertTrue(progress_number.isDisplayed(),"Selectable option not dispalyed");
@@ -239,19 +246,23 @@ public class AppiumHomePage extends Driver {
     }
 
     public void clickOnDisplayToast(){
+        common.waitUntilVisible(title,3);
         showToastButton.click();
         widget_Toast.isDisplayed();
     }
 
     public void clickOnPopupWindow(){
+        common.waitUntilVisible(title,3);
         showPopupWindowButton.click();
         dismiss.click();
     }
     public void pressToThrowUnhandledException(){
+        common.waitUntilVisible(title,3);
         exceptionTestButton.click();
     }
 
     public void typeToThrowUnhandledException(){
+        common.waitUntilVisible(title,3);
         topLevelElementTest.sendKeys("test");
     }
 
